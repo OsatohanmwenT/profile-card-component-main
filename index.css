@@ -1,0 +1,85 @@
+:root{
+--Dark-cyan: hsl(185, 75%, 39%);
+--Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+--Dark-grayish-blue: hsla(227, 10%, 46%, 0.445);
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: var(--Dark-cyan);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--Very-dark-desaturated-blue);
+}
+.container{
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+}
+.container::before{
+    content: url("images/bg-pattern-card.svg");
+}
+.container .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0px;
+}
+.container .content .info{
+    margin-top: 40px;
+    width: 250px;
+}
+.container .content .info h2{
+    margin: 10px auto;
+}
+.container .content .info p{
+    margin: 10px auto;
+}
+img{
+   content: url("images/image-victor.jpg");
+   position: absolute;
+   top: 25%;
+   transform: translateX(-50px);
+   left: 50%;
+   border-radius: 100px;
+   border: 3px solid white;
+   width: fit-content;
+}
+.container .content .rating{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container .content .rating::before{
+    content: "";
+    width: 350px;
+    height: 1px;
+    background-color: var(--Dark-grayish-blue);
+}
+.container .content .rating .rate{
+    display: flex;
+    width: 250px;
+    gap: 20px;
+    justify-content: space-between;
+}
+.container .content .rating .rate-item{
+    display: flex;
+    font-size: 1.6rem;
+    flex-direction: column;
+}
+.container .content .rating .rate-item span{
+    font-size: 0.8rem;
+}
